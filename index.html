@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Лендинг</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="./img/logo-360.png" />
+                        <source media="(max-width: 768px)" srcset="./img/logo-768.png" />
+                        <source media="(min-width: 769px)" srcset="./img/logo.png" />
+                        <img src="./img/logo.png" alt="Логотип X-Solution" />
+                      </picture>
+                    <span class="header__span"></span>
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="./img/vuz-360.png" />
+                        <source media="(max-width: 768px)" srcset="./img/vuz-768.png" />
+                        <source media="(min-width: 769px)" srcset="./img/vuz.png" />
+                        <img src="./img/vuz.png" alt="Логотип ВУЗа" />
+                    </picture>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__ul">
+                      <li><a class="header__link" href="#">Услуги</a></li>
+                      <li><a class="header__link" href="#">Отзывы</a></li>
+                      <li><a class="header__link" href="#">Закрыть сессию</a></li>
+                    </ul>
+                </nav>
+                <div class="header__contact">
+                    <a href="tel:74954870177" class="header_number">8 (495) 487-01-77</a>
+                    <a  href="tel:74954870177" class="header__btn">Консультация</a>
+                    <a href="tel:74954870177" class="header__btn header__btn_mobile">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4855 8.22231L8.59315 6.92614C8.4621 6.86998 8.31912 6.84741 8.17714 6.86045C8.03517 6.87349 7.89869 6.92174 7.78007 7.00083C7.76805 7.00859 7.75659 7.01719 7.74578 7.02655L6.23409 8.31231C6.21841 8.32086 6.20095 8.32564 6.1831 8.32628C6.16524 8.32692 6.14749 8.32339 6.13123 8.31598C5.15957 7.84699 4.153 6.84654 3.68217 5.88834C3.67433 5.87233 3.67026 5.85474 3.67026 5.83691C3.67026 5.81908 3.67433 5.80149 3.68217 5.78548L4.97222 4.25481C4.98149 4.2435 4.99007 4.23164 4.99793 4.2193C5.07593 4.10022 5.12304 3.96359 5.13501 3.82174C5.14698 3.67989 5.12344 3.53729 5.0665 3.40682L3.77952 0.519372C3.70644 0.348922 3.58004 0.206774 3.4193 0.114262C3.25857 0.0217499 3.07216 -0.0161355 2.88806 0.00629165C2.08797 0.111477 1.35355 0.504394 0.822049 1.11162C0.290546 1.71884 -0.00167006 2.49882 7.18027e-06 3.3058C7.18027e-06 8.09985 3.90014 12 8.69418 12C9.50112 12.0015 10.281 11.7093 10.8882 11.1778C11.4954 10.6463 11.8884 9.91197 11.9937 9.11193C12.0161 8.92869 11.9787 8.74313 11.8871 8.58284C11.7956 8.42255 11.6547 8.2961 11.4855 8.22231ZM8.69418 11.2653C4.30546 11.2653 0.734726 7.69453 0.734726 3.3058C0.732679 2.67757 0.95943 2.07009 1.37261 1.59685C1.78579 1.12361 2.35714 0.816987 2.9799 0.734277H2.99399C3.01866 0.734738 3.04262 0.742643 3.06272 0.756955C3.08282 0.771268 3.09813 0.79132 3.10664 0.814484L4.39852 3.69888C4.40589 3.71491 4.40971 3.73235 4.40971 3.75C4.40971 3.76765 4.40589 3.78509 4.39852 3.80112L3.10603 5.33547C3.09643 5.34646 3.08764 5.35812 3.0797 5.37036C2.99883 5.49383 2.9512 5.63609 2.94144 5.78337C2.93168 5.93064 2.96011 6.07795 3.02399 6.21101C3.56707 7.32288 4.68751 8.43476 5.81163 8.97784C5.94547 9.04136 6.09349 9.06911 6.24125 9.05838C6.38901 9.04765 6.53146 8.99881 6.65472 8.91662C6.66635 8.90866 6.67799 8.90008 6.68901 8.8909L8.20008 7.60514C8.215 7.59712 8.23148 7.59242 8.24839 7.59137C8.2653 7.59031 8.28224 7.59292 8.29804 7.59902L11.191 8.89519C11.2146 8.90525 11.2345 8.92249 11.2478 8.94446C11.2611 8.96644 11.2671 8.99204 11.2651 9.01764C11.1828 9.64069 10.8765 10.2125 10.4033 10.6261C9.9302 11.0398 9.32263 11.267 8.69418 11.2653Z" fill="#333333"/>
+                        </svg>
+                    </a>
+                    <button class="header__mobile_menu">
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H19C19.5523 0 20 0.447715 20 1C20 1.55228 19.5523 2 19 2H1C0.447715 2 0 1.55228 0 1ZM0 7C0 6.44772 0.447715 6 1 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H1C0.447715 8 0 7.55228 0 7ZM0 13C0 12.4477 0.447715 12 1 12H19C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H1C0.447715 14 0 13.5523 0 13Z" fill="#333333"/>
+                        </svg>
+                    </button>
+                    
+                    <button class="header__mobile_menu_close hidden">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0747 0.925304C0.684513 1.31617 0.685065 1.94933 1.07593 2.33952L6.73648 7.99021L1.07477 13.6618C0.684591 14.0527 0.685142 14.6858 1.07601 15.076C1.46687 15.4662 2.10004 15.4656 2.49022 15.0748L8.15193 9.40319L13.8149 15.0563C14.2058 15.4465 14.839 15.446 15.2292 15.0551C15.6193 14.6642 15.6188 14.0311 15.2279 13.6409L9.56491 7.98774L15.207 2.33576C15.5972 1.9449 15.5967 1.31173 15.2058 0.921549C14.8149 0.531364 14.1818 0.531917 13.7916 0.922782L8.14946 6.57476L2.48891 0.924072C2.09804 0.533888 1.46488 0.53444 1.0747 0.925304Z" fill="#333333"/>
+                        </svg>
+                    </button>
+                        
+                </div>
+            </div>    
+        </div>     
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="main__wrapper">
+                <h1 class="main__h1">
+                    Срочно закроем <br class="mobile-hidden"> задолженности <br class="pk-hidden"> с гарантией <br class="mobile-hidden"> сдачи
+                </h1>
+                <div class="main__block">
+                    <h2 class="main__h2">Сервис помощи студентам НОИР</h2>
+                    <a class="main__btn" href="">Узнать цену</a>
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="./img/boy-360.png" />
+                        <source media="(max-width: 1199px)" srcset="./img/boy-1199.png" />
+                        <source media="(min-width: 769px)" srcset="./img/boy.png" />
+                        <img class="main__img" src="./img/boy.png" alt="Маскот" />
+                    </picture>
+                </div>
+            
+            </div>
+        </div>
+        <div class="main__gradient"></div>
+    </main>
+       
+    <div id="myModal" class="modal">
+        <div class="modal__content">
+            <nav class="modal__nav">
+                <ul class="modal__ul">
+                  <li><a class="modal__link" href="#">Услуги</a></li>
+                  <li><a class="modal__link" href="#">Отзывы</a></li>
+                  <li><a class="modal__link" href="#">Закрыть сессию</a></li>
+                </ul>
+            </nav>
+            <a class="modal__btn" href="">Консультация</a>
+        </div>
+    </div>
+
+    <script src="./js/script.js" defer></script>
+</body>
+</html>
