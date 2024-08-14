@@ -1,7 +1,7 @@
 @import "./reset.css";
 @import "../fonts/fonts.css";
 
-
+/* Общие стили */
 * {
     font-family: 'Play', sans-serif;
     color: #fff;
@@ -9,6 +9,12 @@
 
 body {
     background: #212121;
+}
+
+::selection {
+    background: rgba(255,221,45,.32)!important;
+    color: rgba(0,0,0,.8)!important;
+    text-shadow: none;
 }
 
 h2 {
@@ -42,6 +48,7 @@ h3 {
 .pk-hidden {
     display: block;
 }
+/* Общие стили */
 
 /* Шапка */
 
@@ -690,6 +697,10 @@ h3 {
 /* reviews */
 
 /* rating */
+.rating {
+    margin-bottom: 64px;
+}
+
 .rating__h2 {
     margin-top: 64px;
     margin-bottom: 28px;
@@ -702,5 +713,203 @@ h3 {
     gap: 10px;
     font-size: 20px;
     line-height: 28px;
+    margin-bottom: 48px;
+}
+
+.rating__body {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.rating__card {
+    width: calc(50% - 10px);
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+}
+
+.rating__round {
+    background: #333;
+    min-width: 36px;
+    min-height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.rating__title {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
+.rating__stars {
+    margin-top: 16px;
+    height: 34px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.rating__stars_group {
+    display: flex;
+    gap: 4px;
+}
+
+.rating__text {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.rating__footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rating__footer_inner {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 /* rating */
+
+
+/* sale */
+.sale {
+    height: 413px;
+    background: #fffbe5;
+}
+
+.sale__wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.sale__block_text {
+    width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.sale__h2 {
+    color: #212121;
+    margin-top: 58px;
+    line-height: 32px;
+}
+
+.sale__p {
+    color: #212121;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.sale__btn {
+    margin-top: 64px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 28px;
+    line-height: 34px;
+    background: #ffdd2d;
+    padding: 15.5px 35.5px;
+}
+
+.sale__img {
+    margin-top: 20px;
+}
+/* sale */
+
+/* cooperation */
+.cooperation {
+    margin-bottom: 64px;
+}
+
+.cooperation__h2 {
+    margin-top: 64px;
+    margin-bottom: 48px;
+}
+
+.cooperation__wrapper {
+    display: flex;
+    gap: 22px;
+    align-items: end;
+}
+
+.cooperation__img {
+    width: 680px;
+}
+
+.cooperation__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.cooperation__li {
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cooperation__span {
+    border: 1px solid #ffdd2d;
+    min-width: 56px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
+.cooperation__p {
+    font-size: 20px;
+    line-height: 28px;
+}
+/* cooperation */
+
+/* form */
+.form {
+    background: #333;
+    border-radius: 25px;
+    height: 553px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__title {
+    width: 578px;
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.form__input {
+    background: #fff;
+    margin-bottom: 14px;
+    width: 580px;
+    height: 65px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #333;
+}
+/* form */
