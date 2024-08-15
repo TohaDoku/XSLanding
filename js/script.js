@@ -1,3 +1,4 @@
+// 1. Открытие и закрытие мобильного меню 
 // Получаем элементы
 var modal = document.getElementById("myModal");
 var btn = document.querySelector(".header__mobile_menu");
@@ -17,6 +18,7 @@ span.onclick = function() {
     btn.classList.remove("hidden");
 }
 
+// 2. Слайдер для отзывов
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.reviews__slide img');
     let currentIndex = 2; // Индекс активного слайда
@@ -53,4 +55,16 @@ document.addEventListener('DOMContentLoaded', function () {
     updateSlides(); // Инициализация начальных изображений
 });
 
+// 3. Отображение текущего года в подвале сайта
+document.getElementById('copyright').innerHTML = '&copy; 2012—' + new Date().getFullYear() + ', X-Solution, официальный сайт, все права защищены';
 
+// 4. Отображение блока с мессенджерами
+document.querySelector('.social-wrapper').addEventListener('click', function() {
+    document.querySelector('.social-wrapper').style.display = 'none';
+    document.querySelector('.social-icons').style.display = 'flex';
+});
+
+document.querySelector('.icons-close').addEventListener('click', function() {
+    document.querySelector('.social-wrapper').style.display = 'flex';
+    document.querySelector('.social-icons').style.display = 'none';
+});
