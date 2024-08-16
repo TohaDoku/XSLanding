@@ -68,3 +68,33 @@ document.querySelector('.icons-close').addEventListener('click', function() {
     document.querySelector('.social-wrapper').style.display = 'flex';
     document.querySelector('.social-icons').style.display = 'none';
 });
+
+// 5. Появление скрола вверх
+document.addEventListener('DOMContentLoaded', () => {
+    const socialWrapper = document.querySelector('.social-wrapper');
+    const servicesBigCard = document.querySelector('.services__big_card');
+    const arrowUp = document.querySelector('.arrow-up');
+
+    function checkPosition() {
+        const servicesBigCardPosition = servicesBigCard.getBoundingClientRect();
+        
+        if (servicesBigCardPosition.top <= window.innerHeight) {
+            socialWrapper.style.display = 'none';
+            arrowUp.style.display = 'flex';
+        } else {
+            socialWrapper.style.display = 'flex';
+            arrowUp.style.display = 'none';
+        }
+    }
+
+    // Добавляем функцию для плавного скролла вверх при нажатии на arrowUp
+    arrowUp.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0, // Прокручиваем страницу в начало
+            behavior: 'smooth' // Плавная прокрутка
+        });
+    });
+
+    
+    window.addEventListener('scroll', checkPosition);
+});

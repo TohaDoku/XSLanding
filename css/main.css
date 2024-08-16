@@ -1286,6 +1286,11 @@ h3, .h3 {
     .br__mobile {
         display: block;
     }
+
+    .form__footer_text {
+        margin-bottom: 32px;
+        padding: 0 8px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1296,7 +1301,7 @@ h3, .h3 {
     }
 
     .form__footer_text {
-        margin-bottom: 32px;
+        width: 480px;
     }
 
     .form__footer_btn {
@@ -1304,13 +1309,15 @@ h3, .h3 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .form__footer {
         width: 100%;
     }
-    
+
     .form__footer_text {
-        margin-bottom: 0 20px 32px 20px;
+        width: 100%;
+        padding-left: 28px;
+        margin-bottom: 0;
     }
 }
 /* form */
@@ -1364,6 +1371,36 @@ h3, .h3 {
     padding-bottom: 17px;
     padding-left: 10px;
 }
+
+@media (max-width: 1220px) {
+    .footer__top {
+        padding: 20px 20px 32px 20px;
+    }
+
+    .footer__top img {
+        width: 120px;
+    }
+
+    .footer__mid_text {
+        padding: 0 20px 0 20px;
+    }
+
+    .footer__hr {
+        margin: 16px 20px;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        align-items: start;
+        gap: 4px;
+        padding-left: 20px;
+    }
+
+    .footer__bot {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 /* footer */
 
 /* social */
@@ -1416,40 +1453,23 @@ svg.sms {
 .messenger-icon {
     width: 100%;
 }
-
-@media (max-width: 576px) {
-    .social-wrapper {
-        right: 18px;
-        bottom: 26px;
-        width: 24px;
-        height: 24px;
-        padding: 9px, 16px, 9px, 16px;
-    }
-
-    .social-wrapper img {
-        width: 12px;
-        height: 12px;
-        
-    }
-
-    .social-icons {
-        right: 18px;
-        bottom: 26px;
-        width: 24px;
-        height: 100px;
-        gap: 2px;
-        padding: 5px 0;
-        border-radius: 5px;
-    }
-
-    .social-icons svg {
-        width: 12px;
-        height: 12px;
-    }
-
-    .icons-close svg {
-        width: 12px;
-        height: 12px;
-    }
-}
 /* social */
+
+/* arrow up */
+.arrow-up {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #333;
+    border-radius: 50%;
+    width: 74px;
+    height: 73px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transition: background-color ease .3s;
+}
+/* arrow up */
