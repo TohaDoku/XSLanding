@@ -9,6 +9,10 @@ btn.onclick = function() {
     modal.classList.add("active");
     span.classList.add("active");
     btn.classList.add("hidden");
+    document.querySelector('.social-wrapper').style.display = 'none';
+    document.querySelector('.social-icons').style.display = 'none';
+    document.querySelector('.arrow-up').style.display = 'none';
+    document.querySelector('body').style.overflow = 'hidden';
 }
 
 // Когда пользователь нажимает на <span> (x), модальное окно закрывается
@@ -16,7 +20,22 @@ span.onclick = function() {
     modal.classList.remove("active");
     span.classList.remove("active");
     btn.classList.remove("hidden");
+    document.querySelector('.social-wrapper').style.display = 'flex';
+    document.querySelector('.arrow-up').style.display = 'flex';
+    document.querySelector('body').style.overflow = 'unset';
 }
+
+// Закрытие модального окна при нажатии на ссылки
+var modalLinks = document.querySelectorAll(".modal__link_go");
+
+modalLinks.forEach(function(modalLink) {
+    modalLink.onclick = function() {
+        modal.classList.remove("active");
+        span.classList.remove("active");
+        btn.classList.remove("hidden");
+        document.querySelector('body').style.overflow = 'unset';
+    };
+});
 
 // 2. Слайдер для отзывов
 document.addEventListener('DOMContentLoaded', function () {
@@ -80,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (servicesBigCardPosition.top <= window.innerHeight) {
             socialWrapper.style.display = 'none';
+            document.querySelector('.social-icons').style.display = 'none';
             arrowUp.style.display = 'flex';
         } else {
             socialWrapper.style.display = 'flex';
@@ -98,3 +118,21 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', checkPosition);
 });
+
+// 6. Плавный скролл по якорным ссылкам
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        const offset = 75;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+
